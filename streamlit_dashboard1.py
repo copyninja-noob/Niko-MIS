@@ -57,7 +57,7 @@ for branch, df in sheets_data.items():
 full_df = pd.concat(branch_frames, ignore_index=True)
 full_df = ensure_month_str(full_df)
 
-st.title("Bomba Foods Profitability Dashboard")
+st.title("Niko Foods Profitability Dashboard")
 
 # Only show Niko branch
 branch_names = ['P&L (Niko)']
@@ -625,4 +625,5 @@ if 'Sale' in full_df.columns and 'Month' in full_df.columns:
 if 'Month' in full_df.columns and 'Profit' in full_df.columns:
     fig_profit = px.line(full_df, x='Month', y='Profit', title="Niko Monthly Profit Trend")
     st.plotly_chart(fig_profit, use_container_width=True)
+
 
