@@ -5,7 +5,7 @@ import plotly.express as px
 import numpy as np
 import openpyxl
 
-st.set_page_config(page_title="Bomba Foods Profitability Dashboard", layout="wide")
+st.set_page_config(page_title="Niko Foods Profitability Dashboard", layout="wide")
 
 # Inject CSS for sticky header and scrollable table container
 st.markdown(
@@ -625,3 +625,4 @@ if 'Sale' in full_df.columns and 'Month' in full_df.columns:
 if 'Month' in full_df.columns and 'Profit' in full_df.columns:
     fig_profit = px.line(full_df, x='Month', y='Profit', title="Niko Monthly Profit Trend")
     st.plotly_chart(fig_profit, use_container_width=True)
+
